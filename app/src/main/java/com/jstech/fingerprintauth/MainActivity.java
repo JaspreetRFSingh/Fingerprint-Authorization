@@ -29,7 +29,6 @@ import javax.crypto.SecretKey;
 public class MainActivity extends AppCompatActivity {
 
     private KeyStore keyStore;
-    // Variable used for storing the key in the Android Keystore container
     private static final String KEY_NAME = "AndroidExamples";
     private Cipher cipher;
     private TextView textView;
@@ -44,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         FingerprintManager fingerprintManager =
                 (FingerprintManager) getSystemService(FINGERPRINT_SERVICE);
 
-        textView = (TextView) findViewById(R.id.errorText);
+        textView = findViewById(R.id.errorText);
 
         // Check whether the device has a Fingerprint sensor.
         if (!fingerprintManager.isHardwareDetected()) {
